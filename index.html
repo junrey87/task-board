@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiteTaskBoard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar left">
+      <h2>Websites</h2>
+      <ul id="siteList" class="site-list"></ul>
+      <button id="addSiteBtn">+ Add Site</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h2 id="siteTitle">Select a website</h2>
+      <div id="taskList" class="task-list"></div>
+      <button id="addTaskBtn" style="display: none;">+ Add Task</button>
+    </main>
+
+    <!-- Right Sidebar (Comments) -->
+    <aside class="sidebar right" id="commentPanel">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 id="commentTitle">Task Comments</h3>
+        <button id="closeCommentsBtn" title="Close" style="font-size: 1.2rem; background: none; color: white;">×</button>
+      </div>
+      <div id="commentList" class="comment-list"></div>
+      <input type="file" id="fileUpload" multiple accept="image/*,application/pdf" />
+      <button id="uploadBtn">Upload</button>
+      <textarea id="newComment" placeholder="Add comment..."></textarea>
+      <button id="addCommentBtn">Add Comment</button>
+      <hr />
+      <button id="generatePdfBtn">Generate PDF Report</button>
+    </aside>
+  </div>
+
+  <footer>©2025 SiteTaskBoard</footer>
+<img id="companyLogo" src="logo-modified.webp" style="display:none;" alt="Company Logo"/>
+
+
+  <!-- jsPDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Load app after DOM + jsPDF -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.jspdf?.jsPDF) {
+        const script = document.createElement("script");
+        script.src = "app.js";
+        document.body.appendChild(script);
+      } else {
+        console.error("jsPDF failed to load.");
+      }
+    });
+  </script>
+</body>
+</html>
