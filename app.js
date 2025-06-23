@@ -1,30 +1,73 @@
 window.addEventListener("load", () => {
   const COMPANY_NAME = "Your Company Name";
   const SOP_TASKS = [
-    "Ensure strong, unique admin credentials",
-    "Set up Cloudflare and enable Bot Fight Mode",
-    "Install Wordfence Security (Pro)",
-    "Install All-in-One WP Migration",
-    "Configure automated backups to a cloud destination",
-    "Install WP Rocket",
-    "Install Smush for image compression",
-    "Install Rank Math and connect Google Search Console & Analytics",
-    "Install Complianz for GDPR compliance",
-    "Ensure legal pages (Privacy, Terms, Disclaimer) exist and are linked",
-    "Use ManageWP and WP Activity Log",
-    "Install Redirection and Broken Link Checker",
-    "Update WordPress core, themes, and plugins",
-    "Review Wordfence scan results and logs",
-    "Verify All-in-One WP Migration backups",
-    "Test site post-updates",
-    "Clear all caches",
-    "Run speed tests (GTmetrix, PageSpeed)",
-    "Optimize DB with WP-Optimize",
-    "Fix crawl and SEO errors using Rank Math & Search Console",
-    "Check all forms and scan content for outdated info",
-    "Verify cookie banner and legal compliance",
-    "Track recurring issues and label backups"
-  ];
+  // Access & Security
+  "Ensure strong, unique admin credentials.",
+  "Set up Cloudflare and enable Bot Fight Mode.",
+  "Install Wordfence Security (Pro) for comprehensive protection (firewall, malware scanning, login protection).",
+  "(Optional) Use Limit Login Attempts Reloaded only if not using Wordfence for login protection.",
+
+  // Backup & Restore
+  "Install All-in-One WP Migration.",
+  "Configure automated backups to a cloud destination such as Google Drive or Dropbox.",
+  "Confirm backup frequency and retention settings.",
+
+  // Performance & Optimization
+  "WP Rocket (recommended for simplicity and premium support).",
+  "Install Smush for image compression.",
+
+  // SEO & Analytics
+  "Install Rank Math.",
+  "Connect site to: Google Search Console and Google Analytics.",
+  "(Optional) Integrate Google Tag Manager for advanced tracking.",
+
+  // Legal Requirements
+  "Use Complianz to manage cookie/GDPR compliance.",
+  "Ensure the following legal pages exist and are properly linked: Privacy Policy, Terms of Service, Disclaimer.",
+
+  // Site Management & Monitoring
+  "Use ManageWP to manage all sites from a centralized dashboard.",
+  "Install WP Activity Log to track user activity and plugin/theme changes.",
+
+  // Other Tools
+  "Install Redirection to manage 404 errors and create 301 redirects.",
+  "Use Broken Link Checker to scan for and fix broken internal or external links.",
+
+  // Security & Updates
+  "Update WordPress core, themes, and plugins.",
+  "Review Wordfence scan results and security logs.",
+  "Verify that backups from All-in-One WP Migration are recent and restorable.",
+  "Confirm Cloudflare Bot Fight Mode is still active.",
+  "Test the site after updates to ensure layout and functionality are intact.",
+  "Review installed plugins – remove anything unnecessary or inactive.",
+
+  // Performance
+  "Clear all caches.",
+  "Run speed tests using GTmetrix or Google PageSpeed Insights.",
+  "Optimize the database using WP-Optimize.",
+
+  // SEO Health
+  "Check for crawl errors using Google Search Console.",
+  "Run an SEO scan with Rank Math.",
+  "Fix broken internal or external links.",
+
+  // Content Check
+  "Test all forms for submission and spam protection.",
+  "Spot-check pages or posts for formatting, typos, and outdated content.",
+  "Ensure all images, videos, and media are loading correctly.",
+
+  // Legal & Compliance
+  "Verify that the cookie banner is displayed and functioning.",
+  "Review legal pages at least annually, or whenever there are legal changes.",
+
+  // Final Notes
+  "Track recurring issues and include them in monthly reports.",
+  "Always confirm plugin compatibility before major updates.",
+  "Notify the business owner before making significant changes.",
+  "Label all backups clearly by site and date.",
+  "Stick to this SOP unless a site requires a special approach."
+];
+
 
   const data = { sites: [] };
   let currentSite = null;
